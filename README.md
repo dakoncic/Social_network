@@ -19,7 +19,7 @@ Svaki korisnik može blokirati drugog korisnika ako ne želi više čuti za njeg
 :white_check_mark: Registracija (obična)\
 :white_check_mark: Chat\
 </br>
-:clock3: Trenutačno u izradi
+:clock3: Trenutačno u izradi:
 * CSS Grid dizajn
 * FB login
 * link preview
