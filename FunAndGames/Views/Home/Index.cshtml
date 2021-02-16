@@ -1,0 +1,100 @@
+﻿@*THIS IS FACEBOOK LANDING PAGE*@
+@*THIS IS FACEBOOK LANDING PAGE*@
+@*THIS IS FACEBOOK LANDING PAGE*@
+@model CreatePostModel
+
+<div class="grid">
+
+
+    <div class="rightGrid">
+        <form asp-action="CreatePost" asp-controller="Home" enctype="multipart/form-data">
+            <div class="postArea">
+
+                <div class="postAreaHeader">Placeholder</div>
+
+                <div class="postAreaContent">
+                    <textarea rows="3" asp-for="postMessage" class="form-control" placeholder="What's on your mind?"></textarea>
+                </div>
+                <div class="postAreaFooter">
+                    <div class="createPost">
+                        <button type="submit" class="convertButton">Post</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="myPostsArea">
+            <div class="myPost">
+                Footer2
+                <p>Lorem ipsum dolor sit amet, amet et, facilisi rhoncus sem. Ultrices velit sed at est quis risus, tincidunt a felis lectus, eros erat in penatibus in, egestas integer non, facilisis sollicitudin porttitor elementum non vivamus. Parturient leo ipsum etiam suspendisse, enim eros wisi eleifend nec scelerisque parturient, rutrum vestibulum auctor vel mattis nibh, morbi maecenas lectus in ultrices. Ipsum faucibus enim integer, interdum quis, at turpis sollicitudin cursus class, nullam vivamus faucibus congue ipsum turpis, sed elit purus. Id feugiat sit, nec ex.</p>
+                <p>a</p>
+                <p>a</p>
+                <p>a</p>
+                <p>a</p>
+            </div>
+            
+            <div class="myPost">
+                <div class="fb-like"  data-width="450" data-show-faces="true">
+                </div>
+            </div>
+            <div class="myPost">
+                <div id="mytitle"></div>
+                <div id="mydescription"></div>
+                
+
+
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        //$.post(',
+                            //function (data) {
+                                //$('#mytitle').html(data.title);
+                                //$('#mydescription').html(data.description);
+
+
+                                //appid 804696127092425
+                                //app secret
+                                //console.log(data.image[0].url);
+                                //$('#myslika').attr('src',data.image[0].url);
+
+
+                            //});
+
+                    });
+                </script>
+            </div>
+
+            @foreach (var post in Model.UserPosts)
+            {
+        <div class="myPost">
+            <p>@post.When</p>
+            <p>@post.postMessage</p>
+            <p>
+                <img src="@Url.Content("/img/postsImages/" + post.ImagePath+ ".png")" alt="">
+                @*<img  src="@Url.Content(@"C:\Users\david\Desktop\Social-network-master\FunAndGames\wwwroot\img\postsImages\4971aa81-2971-4859-a536-687f2392fd9e.png")" alt="">*@
+            </p>
+            <a href="@post.linkURL" target="_blank">
+                <p><img class="websiteImageLinkPreview" src="@Url.Content("~/img/linkImages/" + post.linkImagePath + ".png")" alt=""></p>
+            </a>
+
+
+        </div>            }
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section landingCss {
+    <link href="~/css/homePage.css" rel="stylesheet">
+}

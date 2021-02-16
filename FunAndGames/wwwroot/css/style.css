@@ -1,0 +1,103 @@
+﻿body {
+    background-image: url('../img/gradient.jpg');
+    background-size: cover;
+}
+
+.logoutButton {
+    background: none !important;
+    border: none;
+    padding-top: 5px;
+}
+.convertButton {
+    background: none !important;
+    border:medium;
+}
+.loginBackground{
+    background-color:white;
+}
+.inputFile {
+    width: 0.1px;
+    height: 0.1px;
+}
+
+
+/*WRAPPING*/
+/*WRAPPING*/
+/*WRAPPING*/
+.bodyWrapper {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas: "gallBodyContent gchatArea";
+}
+
+.allBodyContent {
+    grid-area: gallBodyContent;
+    /*ovdje definirati širine a ne u svakom posebno*/
+    margin: 0 auto;
+    max-width: 700px;
+    min-width: 700px;
+    /*background-color:white;*/
+}
+
+/*ONLINE USERS AREA*/
+.chatArea{
+    grid-area:gchatArea;
+    border:solid;
+    display:grid;
+    grid-gap:5px;
+    align-content:start;
+}
+
+.personOnline{
+    background-color:white;
+    height:40px;
+}
+/*ONLINE USERS AREA*/
+
+
+/*CHAT WINDOW AREA*/
+.chatWindowContainer {
+    position: fixed;
+    bottom: 0px;
+    right: 205px;
+    width:800px;
+    
+}
+
+
+
+.chatWindow {
+    border: solid;
+    border-color: black;
+    height: 300px;
+    width: 250px;
+    background-color: white;
+    float: right;
+    margin-left:10px;
+    /*GRID AREA STARTING POINT*/
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-areas: "gchatWindowHeader" "gChatWindowMessages" "gchatWindowMyMessage";
+}
+
+.chatWindowHeader {
+    grid-area: gchatWindowHeader;
+    background-color: beige;
+    display: grid;
+    align-items: center;
+    padding-left: 10px;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+}
+    .chatWindowHeader div:nth-child(6) {
+        grid-column: 6 / 7;
+        padding-left:10px;
+    }
+
+.chatWindowMessages {
+    grid-area: gChatWindowMessages
+}
+
+.chatWindowMyMessage {
+    grid-area: gchatWindowMyMessage;
+}
+/*CHAT WINDOW AREA*/

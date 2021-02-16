@@ -1,0 +1,111 @@
+﻿.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "grightGrid";
+    grid-gap: 10px;
+    /*centering everything*/
+    /*margin: 0 auto;
+    max-width: 700px;
+    min-width: 700px;*/
+
+
+
+    grid-gap: 20px;
+    min-height: 2000px;
+    border: thick;
+}
+
+/*.leftGrid {
+    grid-area: gleftGrid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    align-content: start;
+    background-color: white;
+}*/
+
+/*.mainContent {
+    grid-area: gmainContent;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    align-content: start;*/
+    /*background-color: white;*/
+/*}*/
+
+
+
+
+/*POSTS*/
+/*POSTS*/
+/*RIGHT GRID*/
+.rightGrid {
+    grid-area: grightGrid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "gpostArea" "gmyPostsArea";
+    grid-gap: 30px;
+    align-content: start;
+}
+
+/*RIGHT GRID*/
+/*POST AREA CONTENT*/
+.postArea {
+    grid-area: gpostArea;
+    background-color: white;
+    height: 150px;
+    /*padding:10px;*/
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: "gpostAreaHeader" "gpostAreaContent" "gpostAreaFooter";
+}
+
+.postAreaHeader {
+    grid-area: gpostAreaHeader;
+    background-color: beige;
+    display: grid;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.postAreaContent {
+    grid-area: gpostAreaContent;
+}
+
+.postAreaFooter {
+    grid-area: gpostAreaFooter;
+    background-color: beige;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    justify-items: end;
+    padding-right: 10px;
+}
+
+    .postAreaFooter div:nth-child(1) {
+        grid-column: 1 / 2;
+    }
+/*POST AREA CONTENT*/
+
+.myPostsArea {
+    grid-area: gmyPostsArea;
+    display: grid;
+    /*grid-template-columns: repeat(1, 1fr);mislim da je ovo višak */
+    grid-gap: 30px;
+    /*grid-auto-rows: 100px; veličina za sve*/
+}
+
+.myPost {
+    background-color:white;
+    min-height:150px; uncomment this
+    padding: 10px;
+    word-break: break-all;
+    overflow: hidden; /*omogućava da jedna dugačka rečenica bude prelomljena u novi red*/
+}
+.websiteImageLinkPreview {
+    max-width: 500px;
+    min-width: 500px;
+    max-height: 500px;
+}
+
+/*RIGHT GRID*/

@@ -1,0 +1,126 @@
+﻿@model CreatePostModel
+
+<div class="grid">
+    <div class="title">
+        <div class="profilePhoto">
+
+        </div>
+        <div class="infoOnCover">
+            <div class="firstAndLastName">David Končić</div>
+            <div class="updateInfo">Update Info</div>
+            <div class="activityLog">Activity Log</div>
+        </div>
+
+    </div>
+    <div class="profileNavBar">
+
+    </div>
+    <div class="leftGrid">
+        <div class="intro">
+            <div class="shortBio">
+                <div class="shortBioTitle">Intro</div>
+                <div class="shortBioIcon">>chatIcon<</div>
+                <div class="shortBioText smallerFont">Add a short bio to tell people more about yourself.</div>
+                <div class="shortBioLink smallerFont">AddBio</div>
+            </div>
+            <div class="introStatus">
+                <div class="introStatusCurrentCity smallerFont">Current City</div>
+                <div class="introStatusWorkPlace smallerFont">Workplace</div>
+                <div class="introStatusSchool smallerFont">School</div>
+                <div class="introStatusHomeTown smallerFont">Hometown</div>
+                <div class="introStatusRelationshipStatus smallerFont">Relationship Status</div>
+            </div>
+            <div class="introFeatured">
+                <div class="introFeaturedIcon">starIcon</div>
+                <div style="text-align:center;" class="introFeaturedText smallerFont">
+                    Showcase what's important to you by adding photos pages, groups and more to your featured section on your public profile..
+                </div>
+                <div class="introFeaturedLink smallerFont">Add to Featured</div>
+            </div>
+        </div>
+        <div class="myProfileCoverPhotos">
+            <div class="myProfileCoverPhotosHeader">
+                <div class="myProfileCoverPhotosHeaderTitle">Photos</div>
+                <div class="myProfileCoverPhotosHeaderLink smallerFont">Add Photo</div>
+            </div>
+            <div class="myProfileCoverPhotosContent">
+                <div style="background-image: url('../img/coverPhotos/1.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/coverPhotos/2.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/coverPhotos/3.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/coverPhotos/4.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/coverPhotos/5.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/coverPhotos/6.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/coverPhotos/7.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/coverPhotos/8.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/coverPhotos/9.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+
+            </div>
+        </div>
+        <div class="myProfileCoverFriends">
+            <div class="myProfileCoverFriendsHeader">
+                <div class="myProfileCoverFriendsHeaderTitle">Friends</div>
+                <div class="myProfileCoverFriendsHeaderLink smallerFont">Find Friends</div>
+            </div>
+            <div class="myProfileCoverFriendsContent">
+                <div style="background-image: url('../img/famousPerson/1.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/famousPerson/2.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/famousPerson/3.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/famousPerson/4.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/famousPerson/5.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/famousPerson/6.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/famousPerson/7.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/famousPerson/8.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+                <div style="background-image: url('../img/famousPerson/9.jpg');" class="myProfileCoverPhotos9LastPhotos coverPhoto"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="rightGrid">
+        <form asp-action="CreatePost" asp-controller="MyProfile" enctype="multipart/form-data">
+            <div class="postArea">
+
+                <div class="postAreaHeader">Placeholder</div>
+
+                <div class="postAreaContent">
+                    <textarea rows="3" asp-for="postMessage" class="form-control" style="width:100%; resize:none; white-space: pre-line;" placeholder="What's on your mind?"></textarea>
+                </div>
+                <div class="postAreaFooter">
+                    <div>
+                        <label asp-for="image">Attach Photo</label>
+                        <input type="file" asp-for="image" class="inputFile"/>
+
+                    </div>
+                    <div class="createPost">
+                        
+                        <button type="submit" class="convertButton">Post</button>
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" asp-for="userID" />
+        </form>
+
+        <div class="myPostsArea">
+            @foreach (var post in Model.UserPosts)
+            {
+            <div class="myPost">
+                <p>@post.When</p>
+                <p>@post.postMessage</p>
+                <a href="@post.linkURL" target="_blank">
+                    <p><img class="websiteImageLinkPreview" src="@Url.Content("~/img/linkImages/" + post.linkImagePath + ".png")" alt=""></p>
+                </a>
+                <p><img class="websiteImageLinkPreview" src="@Url.Content("~/img/postsImages/" + post.ImagePath + ".png")" alt=""></p>
+
+            </div>
+            }
+            
+        </div>
+    </div>
+</div>
+
+
+
+@section profileCss {
+    <link href="~/css/myProfile.css" rel="stylesheet">
+}
