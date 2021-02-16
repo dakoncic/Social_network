@@ -12,13 +12,14 @@ Manje funkcionalnosti aplikacije će biti dodavane tijekom izrade.
 </br>
 * za Chat komunikaciju je korišten SignalR
 * za dizajn samo CSS Grid
-* za link preview je korišten Facebook Graph API
 * za FB login je korišten Facebook SDK 
+* za link preview je korišten Facebook Graph API
+
 
 *Funkcionalnosti*\
 :white_check_mark: Registracija (obična)\
 :white_check_mark: Chat\
-:clock3: Trenutačno u izradi\
+:clock3: Trenutačno u izradi
 * CSS Grid dizajn
 * FB login
 * link preview
