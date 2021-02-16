@@ -1,4 +1,4 @@
-# Social network
+# :family: Social network :blue_heart:
 
 U tijeku je izrada društvene mreže. Na aplikaciji će se moći registrirati ili logirati preko Facebook računa.\
 </br>
@@ -10,10 +10,10 @@ Svaki korisnik može blokirati drugog korisnika ako ne želi više čuti za njeg
 
 Manje funkcionalnosti aplikacije će biti dodavane tijekom izrade.
 </br>
-* za Chat komunikaciju je korišten SignalR
-* za dizajn samo CSS Grid
-* za FB login je korišten Facebook SDK 
-* za link preview je korišten Facebook Graph API
+* :speech_balloon: za Chat komunikaciju je korišten SignalR
+* :art: za dizajn samo CSS Grid
+* :key: za FB login je korišten Facebook SDK 
+* :cinema: za link preview je korišten Facebook Graph API
 
 
 *Funkcionalnosti*\
