@@ -7,13 +7,12 @@ Korisnicima su preporučeni novi prijatelji na temelju zajedničkih.
 Prijatelji si međusobno mogu slati privatne poruke ili razgovarati preko Chat-a.
 Korisnici dobivaju notifikacije o raznim novostima koje su relevantne za njih.
 Svaki korisnik može blokirati drugog korisnika ako ne želi više čuti za njega.
-
-Manje funkcionalnosti aplikacije će biti dodavane tijekom izrade.
 </br>
-* :speech_balloon: za Chat komunikaciju je korišten SignalR
-* :art: za dizajn samo CSS Grid
-* :key: za FB login je korišten Facebook SDK 
-* :cinema: za link preview je korišten Facebook Graph API
+
+* :speech_balloon: Chat komunikacija :arrow_right: SignalR
+* :art: dizajn :arrow_right: samo CSS Grid
+* :key: FB login :arrow_right: Facebook SDK 
+* :cinema: link preview :arrow_right: Facebook Graph API
 
 
 *Funkcionalnosti*\
